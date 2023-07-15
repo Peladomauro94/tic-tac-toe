@@ -6,7 +6,7 @@ function App() {
   const [squares, setSquares] = useState(["", "", "", "", "", "", "", "", ""]);
   const [info, setInfo] = useState("");
   const [winner, setWinner] = useState("")
-  
+  const [theme, setTheme] = useState('sun');
 
   const onNextMove = (position) => {
     if (squares[position] === "") {
@@ -59,28 +59,47 @@ function App() {
     }
   };
 
+  const handleButtonClick = () => {
+    const newTheme = theme === 'sun' ? 'moon' : 'sun';
+    setTheme(newTheme);
+    if (newTheme == 'sun') {
+      document.body.classList.remove('sun');
+      document.body.classList.add('moon');
+    }else{
+      document.body.classList.remove('moon');
+      document.body.classList.add('sun');
+    };}
+
 
   return (
 
-    <div className="total">
+    <div className={`total ${theme}`}>
       
       <div className="game-div">
-        <h2>Turno Actual: {nextMove} </h2>
-       {  !info ? "" :  <h4>{info}</h4>} 
-        <div className='buttons-div'>
-          <div className="square top-left" onClick={()=>onNextMove(0)}>{squares[0]}</div>
-          <div className="square" onClick={()=>onNextMove(1)}>{squares[1]}</div>
-          <div className="square top-right" onClick={()=>onNextMove(2)}>{squares[2]}</div>
+        <button className={`header-icon ${theme}`} onClick={handleButtonClick}>
+          <img src={theme === 'sun' ? '/icon-moon.svg' : '/icon-sun.svg'}  alt="..."/>
+        </button>
+
+        <h2 className={theme}>Turno Actual: {nextMove} </h2>
+
+       {  !info ? "" :  <h4 className={theme}>{info}</h4>} 
+
+        <div className={`buttons-div ${theme}`}>
+          <div className={`square ${theme} top-left`} onClick={()=>onNextMove(0)}>{squares[0]}</div>
+          <div className={`square ${theme}`} onClick={()=>onNextMove(1)}>{squares[1]}</div>
+          <div className={`square ${theme} top-right`} onClick={()=>onNextMove(2)}>{squares[2]}</div>
         </div>
-        <div className='buttons-div'>
-          <div className="square" onClick={()=>onNextMove(3)}>{squares[3]}</div>
-          <div className="square" onClick={()=>onNextMove(4)}>{squares[4]}</div>
-          <div className="square" onClick={()=>onNextMove(5)}>{squares[5]}</div>
+
+        <div className={`buttons-div ${theme}`}>
+          <div className={`square ${theme}`} onClick={()=>onNextMove(3)}>{squares[3]}</div>
+          <div className={`square ${theme}`} onClick={()=>onNextMove(4)}>{squares[4]}</div>
+          <div className={`square ${theme}`} onClick={()=>onNextMove(5)}>{squares[5]}</div>
         </div>
-        <div className='buttons-div'>
-          <div className="square bottom-left" onClick={()=>onNextMove(6)}>{squares[6]}</div>
-          <div className="square" onClick={()=>onNextMove(7)}>{squares[7]}</div>
-          <div className="square bottom-right" onClick={()=>onNextMove(8)}>{squares[8]}</div>
+
+        <div className={`buttons-div ${theme}`}>
+          <div className={`square ${theme} bottom-left`} onClick={()=>onNextMove(6)}>{squares[6]}</div>
+          <div className={`square ${theme}`} onClick={()=>onNextMove(7)}>{squares[7]}</div>
+          <div className={`square ${theme} bottom-right`} onClick={()=>onNextMove(8)}>{squares[8]}</div>
         </div>
       </div>
     </div>

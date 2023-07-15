@@ -14,6 +14,13 @@ body{
   font-family: 'Rubik', sans-serif;
 }
 
+.total.moon{
+  background-image: url('/background-dark.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
 
 
 .game-div{
@@ -26,6 +33,35 @@ body{
   align-items: center;
 }
 
+.game-div.moon{
+  color: black;
+}
+
+.header-icon{
+  background-color: rgba(88, 86, 86, 0.919);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.783);
+  padding: 1rem;
+  border-radius: 100%;
+  border: 1px solid rgb(74, 74, 74);
+  position: absolute;
+  width: 4rem;
+  top: -4rem;
+  right: 0;
+}
+
+.header-icon.moon{
+  background-color: transparent;
+  padding: 0rem;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+img{
+  width: 100%;
+  
+}
+
 .buttons-div{
   display: flex;
 }
@@ -36,6 +72,16 @@ h2{
   background-color: rgba(88, 86, 86, 0.919);
   padding: 1rem;
   border-radius: 20px;
+  box-shadow: 7px 8px 10px rgba(0, 0, 0, 0.783);
+}
+
+h2.moon{
+  font-size: 2.2rem;
+  color: black;
+  background-color: rgba(229, 227, 227, 0.821);
+  
+  padding: 1rem;
+  border-radius: 20px;
 }
 
 h4{
@@ -43,12 +89,18 @@ h4{
   font-size: 1.2rem;
   color:white;
   background-color: rgba(88, 86, 86, 0.919);
+  box-shadow: 7px 8px 10px rgba(0, 0, 0, 0.783);
   border-radius: 10px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-right: 1rem;
   padding-left: 1rem;
 
+}
+
+h4.moon{
+  color: black;
+  background-color: rgba(229, 227, 227, 0.821);
 }
 
 
@@ -73,13 +125,19 @@ h4{
 } 
 
 .square{
-  border: 1px solid grey;
+  border: 1px solid rgb(248, 245, 245);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-size: 40px;
-  background-color: rgba(88, 86, 86, 0.653);
+  background-color: rgba(88, 86, 86, 0.866);
   width: 5rem;
   height: 5rem;
+  box-shadow: 10px 12px 10px rgba(0, 0, 0, 0.783);
+}
+
+.square.moon{
+  color: black;
+  background-color: rgba(229, 227, 227, 0.567);
 }
