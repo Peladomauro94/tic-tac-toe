@@ -1,0 +1,85 @@
+body{
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.total{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.846);
+  justify-content: center;
+  align-items: center;
+  background-image: url('/background.jpg');
+  font-family: 'Rubik', sans-serif;
+}
+
+
+
+.game-div{
+  position: relative;
+  top: -3rem;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-div{
+  display: flex;
+}
+
+h2{
+  font-size: 2.2rem;
+  color: white;
+  background-color: rgba(88, 86, 86, 0.919);
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+h4{
+  margin-top: 0px;
+  font-size: 1.2rem;
+  color:white;
+  background-color: rgba(88, 86, 86, 0.919);
+  border-radius: 10px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+}
+
+
+.top-left{
+  border-top-left-radius: 20px;
+} 
+
+.top-right{
+  border-top-right-radius: 20px;
+} 
+
+.buttons-div{
+  max-height: 5rem;
+}
+
+.bottom-left{
+  border-bottom-left-radius: 20px;
+} 
+
+.bottom-right{
+  border-bottom-right-radius: 20px;
+} 
+
+.square{
+  border: 1px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 40px;
+  background-color: rgba(88, 86, 86, 0.653);
+  width: 5rem;
+  height: 5rem;
+}
